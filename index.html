@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cv hmtl & css</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        body {
+            background: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 1000px;
+            background: #fff;
+            margin: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            box-sizing: 0 35px 55px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container .left_Side {
+            position: relative;
+            background: #003147;
+            padding: 40px;
+        }
+        
+        .profileText {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .container .right_Side {
+            position: relative;
+            background: #fff;
+            padding: 40px;
+        }
+        
+        .profileText h2 {
+            color: #fff;
+            font-size: 1.5em;
+            margin-top: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.4em;
+        }
+        
+        .profileText h2 span {
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+        
+        .contactInfo {
+            padding-top: 40px;
+        }
+        
+        .title {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        
+        .contactInfo ul {
+            position: relative;
+        }
+        
+        .contactInfo ul li {
+            position: relative;
+            list-style: none;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        
+        .contactInfo ul li .icon {
+            display: inline-block;
+            width: 30px;
+            font-size: 18px;
+            color: #03a9f4;
+        }
+        
+        .contactInfo ul li span {
+            color: #fff;
+            font-weight: 300;
+        }
+        
+        .contactInfo.education li {
+            margin-bottom: 15px;
+        }
+        
+        .contactInfo.education h5 {
+            color: #03a9f4;
+            font-weight: 500;
+        }
+        
+        .contactInfo.education h4 {
+            color: #fff;
+            font-weight: 500;
+        }
+        
+        .about {
+            margin-bottom: 50px;
+        }
+        
+        .about:last-child {
+            margin-bottom: 0;
+        }
+        
+        .title2 {
+            color: #003147;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        
+        .skills .box {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .skills .box h4 {
+            text-transform: uppercase;
+            color: black;
+            font-weight: 500;
+        }
+        
+        .skills .box .percent {
+            position: relative;
+            width: 100%;
+            height: 10px;
+            background: #f0f0f0;
+        }
+        
+        .skills .box .percent div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #03a9f4;
+        }
+        
+        @media(max-width:1000px) {
+            .container {
+                margin: 10px;
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .interest ul {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media(max-width:600px) {
+            .about .box {
+                flex-direction: column;
+            }
+            .about .box .year_company {
+                margin-bottom: 5px;
+            }
+            .interest ul {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .skills .box {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left_Side">
+            <div class="profileText">
+                <div class="imgBx">
+                    <img src="">
+                </div>
+                <h2>Hanani Santos Teixeira<br><span>web Developer</span> </h2>
+            </div>
+
+            <div class="contactInfo">
+                <h3 class="title">Contact Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-phone-square" aria-hidden="true"></i></span>
+                        <span class="text">55 (98) 9 8781-5967</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></i></span>
+                        <span class="text">Hanani.kira@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>
+                        <span class="text">São Luís do maranhão, Brasil</span>
+                    </li>
+
+            </div>
+            <div class="contactInfo education">
+                <h3 class="title">Education</h3>
+                <ul>
+                    <li>
+
+                        <i class="fa fa-graduation-cap" aria-hidden="true" style="color:#03a9f4; ;"></i>
+                        <span class=" text ">2019 - 2023</span>
+                        <br>
+                        <br>
+                        <!-- <h5>2019 - 2023</h5> -->
+
+                        <i class="fa fa-university " aria-hidden="true" style="color:#03a9f4; ;"></i>
+                        <span class="text">Faculdade Pitágoras</span>
+                        <br>
+                        <br>
+
+
+                        <i class="fa fa-desktop" aria-hidden="true" style="color:#03a9f4; ;"></i>
+                        <span class="text">Bacharel em Ciencia da Computação</span>
+
+                    </li>
+
+                </ul>
+
+
+            </div>
+        </div>
+        <div class="right_Side">
+            <div class="about">
+                <!-- <h2 class="title2">Profile</h2> -->
+                <h2 style="color:#003147;">Profile</h2>
+                <br>
+                <p>Busco o meu primeiro emprego, com o objetivo de desenvolver os conhecimentos que aprendi no curso de Ciencia da Computação. Tenho o compromisso de contribuir com o crescimento da empresa e adquirir novas experiencias. </p>
+            </div>
+            <div class="about">
+                <!-- <h2 class="title2">Projects</h2> -->
+                <h2 style="color:#003147;">Projects</h2>
+                <br>
+
+                <div class="box">
+                    <div class="year_company">
+                        <p>Participa do projeto webinarzebrafish</p>
+                        <br>
+                        <p>Participa de projeto de pesquisa MediWay, Medilyne e Matrip</p>
+                    </div>
+                    <br>
+                    <div class="text">
+                        <h2 style="color:#003147;">Courses W3schools</h2>
+                        <br>
+                        <i class="fa-brands fa-html5"></i>
+                        <span class="text">Html</span>
+                        <br>
+                        <br>
+                        <!-- <p>Html</p> -->
+
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <span class="text">Css</span>
+                        <br>
+                        <br>
+                        <!-- <p>Css</p> -->
+
+                        <i class="fa-brands fa-square-js"></i>
+                        <span class="text">JavaScript</span>
+                        <br>
+                        <br>
+                        <i class="fa-brands fa-php"></i>
+                        <span class="text">Php</span>
+                        <br>
+                        <br>
+                        <!-- <p>JavaScript</p> -->
+                        <i class="fa fa-database" aria-hidden="true"></i>
+                        <span class="text">MySql</span>
+                        <!-- <p>MySql</p> -->
+                    </div>
+                    <br>
+                    <div class="text">
+                        <h2 style="color:#003147;">Courses Udemy</h2>
+                        <br>
+                        <p>Crie sites profissionais com wordpress 2022 - 6 projetos</p>
+                        <br>
+                        <p>Curso de python 3 do Básico ao avançado( com projetos )</p>
+
+                    </div>
+                </div>
+                <br>
+                <div class="about skills">
+                    <h2 class="title2">Professional Skills</h2>
+                    <br>
+                    <div class="box">
+                        <h4>Html</h4>
+                        <div class="percent">
+                            <div style="width:90%;"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="box">
+                        <h4>Css</h4>
+                        <div class="percent">
+                            <div style="width:90%;"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="box">
+                        <h4>JavaScript</h4>
+                        <div class="percent">
+                            <div style="width:50%;"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="box">
+                        <h4>Php</h4>
+                        <div class="percent">
+                            <div style="width:40%;"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="box">
+                        <h4>MyQql</h4>
+                        <div class="percent">
+                            <div style="width:90%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>
